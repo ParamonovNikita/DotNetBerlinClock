@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using BerlinClock.App.Constructor;
+using BerlinClock.App.Shared;
 
 namespace BerlinClock
 {
@@ -9,7 +7,8 @@ namespace BerlinClock
     {
         public string convertTime(string aTime)
         {
-            throw new NotImplementedException();
+            var clockConverter = new ClockConstructor(SupportedClocksEnum.Berlin);
+            return clockConverter.ConvertTime(aTime);
         }
     }
 }
